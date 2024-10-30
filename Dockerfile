@@ -1,6 +1,6 @@
 FROM --platform=$BUILDPLATFORM golang:1.21-bullseye AS base
 
-FROM base as build
+FROM base AS build
 
 WORKDIR /go/src
 
@@ -23,7 +23,7 @@ RUN --mount=type=cache,target=/root/.cache/go-build \
      && /build/gopls version
 
 
-FROM base as devcontainer
+FROM base AS devcontainer
 COPY --from=gopls /build/gopls /usr/local/bin/gopls
 
 
