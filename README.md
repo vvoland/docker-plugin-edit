@@ -5,7 +5,7 @@
 ## Installation
 
 ```shell
-$ echo "FROM vlnd/docker-edit" | docker buildx build - -o type=local,dest=$HOME/.docker/cli-plugins --pull
+$ echo "FROM vlnd/docker-edit" | docker buildx build - -o type=local,dest=$HOME/.docker/cli-plugins --pull --platform local
 ```
 
 ## Usage
